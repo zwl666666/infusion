@@ -110,7 +110,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
+        <source src="./static/images/teaser.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
@@ -189,31 +189,19 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Text-to-image (T2I) customization aims to create images that embody specific visual concepts delineated in textual descriptions
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            However, existing works still face a main challenge, concept overfitting. To tackle this challenge, we first analyze overfitting, categorizing
+            it into concept-agnostic overfitting, which undermines non-customized concept knowledge, and concept-specific overfitting, 
+            which is confined to customize on limited modalities, i.e, backgrounds, layouts, styles. To evaluate the overfitting degree, we 
+            further introduce two metrics, i.e, Latent Fisher divergence and Wasserstein metric to measure the distribution changes of non-customized and customized concept respectively.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Drawing from the analysis, we propose Infusion, a T2I customization method that enables the learning of target concepts to avoid being constrained
+            by limited training modalities, while preserving non-customized knowledge. Remarkably, Infusion achieves this feat with remarkable
+            efficiency, requiring a mere 11KB of trained parameters. Extensive experiments also demonstrate that our approach outperforms state-of-the-art 
+            methods in both single and multi-concept customized generation.
           </p>
         </div>
       </div>
@@ -225,8 +213,15 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/infusion_intro.mp4"
+                    type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
@@ -330,7 +325,7 @@
                  preload
                  playsinline
                  width="75%">
-            <source src="./static/videos/replay.mp4"
+            <source src="./static/videos/infusion_intro.mp4"
                     type="video/mp4">
           </video>
         </div>
