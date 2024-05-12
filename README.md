@@ -65,7 +65,7 @@ python scripts/infusion_txt2img.py --ddim_eta 0.0 \
                                     --tau 0.15 \
                                     --n_samples 4 \
                                     --n_iter 1 \
-                                    --personalized_ckpt ./ckpt/teddy.ckpt \
+                                    --personalized_ckpt ./ckpt/cat.ckpt \
                                     --prompt "photo of a {}"
 ```
 ## Citation
