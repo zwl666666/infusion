@@ -28,7 +28,7 @@ Then run the commands:
 ```
 python main.py \
     --name teddy \
-    --base ./configs/perfusion_teddy.yaml \
+    --base ./configs/infusion_cat.yaml \
     --basedir ./ckpt \
     -t True \
     --gpus 0,
@@ -43,13 +43,13 @@ Then run:
 ```
 python ./data/soft_segment.py --image_dir /path/to/your/images/ --super_class your_own_super_class
 ```
-Modify the `initializer_words`, `data_root`, `flip_p` in `./configs/perfusion_custom.yaml` or `./configs/perfusion_custom_sd_v2.yaml`.
+Modify the `initializer_words`, `data_root`, `flip_p` in `./configs/infusion_custom.yaml` or `./configs/infusion_custom_sd_v2.yaml`.
 
 Finally, run:
 ```
 python main.py \
     --name experiment_name \
-    --base ./configs/perfusion_custom.yaml \
+    --base ./configs/infusion_custom.yaml \
     --basedir ./ckpt \
     -t True \
     --gpus 0,
@@ -58,7 +58,7 @@ You can find weights along with tensorboard in `./ckpt`.
 ## Generating
 Personalized samples can be obtained by running the command
 ```
-python scripts/perfusion_txt2img.py --ddim_eta 0.0 \
+python scripts/infusion_txt2img.py --ddim_eta 0.0 \
                                     --steps 50  \
                                     --scale 6.0 \
                                     --beta 0.7 \
