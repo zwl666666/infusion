@@ -22,3 +22,6 @@ If you find this work useful for your research, please consider citing our paper
   year={2024}
 }
 ```
+## Acknowledgement
+
+This repo benefits from [Custom Diffusion](https://github.com/adobe-research/custom-diffusion), [Perfusion](https://github.com/ChenDarYen/Key-Locked-Rank-One-Editing-for-Text-to-Image-Personalization) Thanks for their wonderful works.
