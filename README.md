@@ -26,12 +26,7 @@ Download the [SD V1.5](https://huggingface.co/runwayml/stable-diffusion-v1-5/res
 Then run the commands:
 
 ```
-python main.py \
-    --name teddy \
-    --base ./configs/infusion_cat.yaml \
-    --basedir ./ckpt \
-    -t True \
-    --gpus 0,
+sh train.sh
 ```
 To prepare your own training data, please ensure that they are placed in a folder `/path/to/your/images/`.
 You need to download pretrained weight of [clipseg](https://github.com/timojl/clipseg):
