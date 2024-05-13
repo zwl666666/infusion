@@ -7,9 +7,9 @@ However, existing works still face a main challenge, concept overfitting. To tac
 Drawing from the analysis, we propose Infusion, a T2I customization method that enables the learning of target concepts to avoid being constrained by limited training modalities, while preserving non-customized knowledge. Remarkably, Infusion achieves this feat with remarkable efficiency, requiring a mere 11KB of trained parameters. Extensive experiments also demonstrate that our approach outperforms state-of-the-art methods in both single and multi-concept customized generation. <br>
 
 ### ⏳ To do
-- [x] Customized training
-- [x] Single concepts inference
-- [x] Multi concepts inference
+- [ ] Customized training
+- [ ] Single concepts inference
+- [ ] Multi concepts inference
 - [ ] overfitting metrics
 - [ ] Support SDXL-1.0
 
