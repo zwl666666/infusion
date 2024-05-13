@@ -47,26 +47,13 @@ Modify the `initializer_words`, `data_root`, `flip_p` in `./configs/infusion_cus
 
 Finally, run:
 ```
-python main.py \
-    --name experiment_name \
-    --base ./configs/infusion_custom.yaml \
-    --basedir ./ckpt \
-    -t True \
-    --gpus 0,
+sh train.sh
 ```
 You can find weights along with tensorboard in `./ckpt`.
 ## Generating
 Personalized samples can be obtained by running the command
 ```
-python scripts/infusion_txt2img.py --ddim_eta 0.0 \
-                                    --steps 50  \
-                                    --scale 6.0 \
-                                    --beta 0.7 \
-                                    --tau 0.15 \
-                                    --n_samples 4 \
-                                    --n_iter 1 \
-                                    --personalized_ckpt ./ckpt/cat.ckpt \
-                                    --prompt "photo of a {}"
+sh inference.sh
 ```
 ## Citation
 
