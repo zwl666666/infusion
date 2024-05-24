@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-CUDA_VISIBLE_DEVICES=2 python scripts/perfusion_txt2img.py --ddim_eta 0.0 \
+CUDA_VISIBLE_DEVICES=2 python scripts/infusion_txt2img.py --ddim_eta 0.0 \
                                     --outdir ./outputs/ori_cat_1500  \
                                     --seed 2023 \
                                     --steps 50  \
