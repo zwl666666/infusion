@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 CUDA_VISIBLE_DEVICES=2 python scripts/infusion_txt2img.py --ddim_eta 0.0 \
-                                    --outdir ./outputs/ori_cat_1500  \
+                                    --outdir ./outputs/cat  \
                                     --seed 2023 \
                                     --steps 50  \
                                     --scale 8.0 \
