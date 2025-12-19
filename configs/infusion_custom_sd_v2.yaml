@@ -2,7 +2,7 @@ model:
   embedding_learning_rate: 0.006
   target_output_learning_rate: 0.03
   base_learning_rate: 1.0e-4
-  target: perfusion.perfusion.Perfusion
+  target: infusion.infusion.Infusion
   params:
     linear_start: 0.00085
     linear_end: 0.0120
@@ -22,7 +22,7 @@ model:
     ckpt_path: "./ckpt/v2-1_512-ema-pruned.ckpt"
 
     personalization_config:
-      target: perfusion.embedding_manager.EmbeddingManager
+      target: infusion.embedding_manager.EmbeddingManager
       params:
         placeholder_strings: [ "*" ]
         initializer_words: [ "your_super_class"  ]
@@ -30,7 +30,7 @@ model:
         progressive_words: False
 
     unet_config:
-      target: perfusion.roe_openaimodel.UNetModel
+      target: infusion.roe_openaimodel.UNetModel
       params:
         use_checkpoint: True
         use_fp16: True
@@ -85,7 +85,7 @@ data:
     num_workers: 10
     wrap: true
     train:
-      target: perfusion.dataset.PersonalizedBase
+      target: infusion.dataset.PersonalizedBase
       params:
         data_root: '/path/to/your/images/'
         flip_p: 0.5  # 0. when asymmetric
