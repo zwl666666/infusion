@@ -20,7 +20,7 @@ model:
     ckpt_path: "./ckpt/sd-v1-5.ckpt"
 
     personalization_config:
-      target: perfusion.embedding_manager.EmbeddingManager
+      target: infusion.embedding_manager.EmbeddingManager
       params:
         placeholder_strings: [ "*" ]
         initializer_words: [ "cat" ] # 
@@ -28,7 +28,7 @@ model:
         progressive_words: False
 
     unet_config:
-      target: perfusion.roe_openaimodel.UNetModel
+      target: infusion.roe_openaimodel.UNetModel
       params:
         image_size: 32
         in_channels: 4
@@ -77,7 +77,7 @@ data:
     num_workers: 10
     wrap: true
     train:
-      target: perfusion.dataset.PersonalizedBase
+      target: infusion.dataset.PersonalizedBase
       params:
         data_root: '/home/zwl/codes/Key-Locked-Rank-ori/training_data/cat' #'./training_data/pot/'
         placeholder_token: 'cat' #
